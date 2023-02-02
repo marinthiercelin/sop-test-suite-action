@@ -1,0 +1,5 @@
+name: 'OpenPGP interoperability test suite'
+description: 'Run the interoperability test suite for OpenPGP implementations'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
