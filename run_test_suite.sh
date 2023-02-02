@@ -1,4 +1,9 @@
 #!/bin/bash
+set -x 
+
 CONFIG_PATH=$1
-cp CONFIG_PATH config.json
-cargo run -- --html-out results/results.html
+RESULTS_PATH=$2
+
+cp -r ${TEST_SUITE_DIR}
+
+$TEST_SUITE --config $CONFIG_PATH --json-out $RESULTS_PATH
