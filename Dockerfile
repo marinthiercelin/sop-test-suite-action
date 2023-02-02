@@ -6,16 +6,7 @@ RUN git clone https://gitlab.com/sequoia-pgp/openpgp-interoperability-test-suite
 
 WORKDIR openpgp-interoperability-test-suite
 
-RUN cargo build 
-
-ARG CONFIG=config.json
-ARG SOP_DIR=sop_dir
-
-COPY ${CONFIG} config.json
-
-COPY ${SOP_DIR} sop_dir
-
-COPY run_test_suite.sh run_test_suite.sh
+RUN cargo build
 
 RUN mkdir results
 

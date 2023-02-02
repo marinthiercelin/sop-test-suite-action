@@ -1,5 +1,13 @@
 name: 'openpgp-interoperability-test-suite'
 description: 'Run the interoperability test suite for OpenPGP implementations'
+
+inputs:
+  config-path:  # id of input
+    description: 'Path to configuration file'
+    required: true
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.config-path }}
