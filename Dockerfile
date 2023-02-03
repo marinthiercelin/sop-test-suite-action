@@ -1,4 +1,4 @@
-FROM rust
+FROM ubuntu
 
 # Build test suite
 
