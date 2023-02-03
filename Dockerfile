@@ -12,9 +12,9 @@ RUN git clone ${TEST_SUITE_REPO} ${TEST_SUITE_DIR}
 
 WORKDIR ${TEST_SUITE_DIR}
 
-RUN cargo build -r
+RUN cargo build
 
-ENV TEST_SUITE=${TEST_SUITE_DIR}/target/release/openpgp-interoperability-test-suite
+ENV TEST_SUITE=${TEST_SUITE_DIR}/target/debug/openpgp-interoperability-test-suite
 
 # Set up running configuration
 
